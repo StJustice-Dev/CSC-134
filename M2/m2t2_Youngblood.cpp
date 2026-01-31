@@ -8,6 +8,7 @@ Assumption: Sales tax is 8% (Varies via County)
 */
 
 #include <iostream>
+#include <iomanip> 
 using namespace std;
 
 int main () {
@@ -41,6 +42,7 @@ int main () {
     
 
     // Present the output
+    cout << setprecision(2) << fixed; // Set outputs to 2 decimal places
     cout << endl << "YOUR ORDER: " << endl << "==============" << endl;
     cout << num_Meals << " x " << mealName << "\t$" << mealPrice << endl;
     cout << "Subtotal: \t\t$" << subTotal << endl;
@@ -48,7 +50,7 @@ int main () {
     cout << "Tax: \t\t\t$" << taxAmount << endl;
     cout << "==============" << endl;
     cout << "Total: \t\t\t$" << totalPrice << endl;  
-
+    cout << endl << "THANK YOU, COME AGAIN." << endl;
 
     return 0;
 }
