@@ -18,7 +18,8 @@ int main () {
     double taxRate = 0.80;              // Tax Rate, 8% == 8/100 Per cent.    
     double tipAmount;
     double taxAmount;                   // $ of actual tax charged
-    double totalPrice;                  // Meal + Meal Tax + Tip
+    double subTotal;                    // Price before tax/tips
+    double totalPrice;                  // Subtotal + Meal Tax + Tip
     int    num_Meals;                   // How many the user purchases
 
     // Get user input
@@ -27,11 +28,18 @@ int main () {
     cout << endl;
     cout << "Cost for a singular platter is $" << mealPrice << ". How many would you like to purchase? ";
     cin >> num_Meals; 
-    
+
 
     // Do the calculation
-
+    subTotal = mealPrice * num_Meals; 
+    
     // Present the output
+    cout << endl << "YOUR ORDER: " << endl << "==============" << endl;
+    cout << num_Meals << " x " << mealName << "\t$" << mealPrice << endl;
+    cout << "Subtotal: \t\t$" << subTotal << endl;
+
+    cout << endl << "How much would you like to tip? ";
+    cin >> tipAmount; 
 
     return 0;
 }
