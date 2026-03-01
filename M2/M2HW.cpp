@@ -28,8 +28,6 @@ int main() {
     
     // Get account name from user
     cout << "What is your account name? ";
-    cin >>
-    
 
 }
 
