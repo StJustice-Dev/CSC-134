@@ -1,5 +1,5 @@
 // CSC 134
-// M3T2
+// M3T1v2
 // Youngblood
 // 3/1/26
 // Ask the user for the width and length of two rectangles
