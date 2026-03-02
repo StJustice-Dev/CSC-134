@@ -31,7 +31,7 @@ int main() {
     area2 = len2 * wid2;
     // Print the area
     cout << "The first rectangle has an area of: " << area1 << endl;
-    cout << "The first rectangle has an area of: " << area2 << endl;  
+    cout << "The second rectangle has an area of: " << area2 << endl;  
 
     return 0;
 }
