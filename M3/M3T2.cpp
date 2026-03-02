@@ -1,9 +1,9 @@
 // CSC 134
-// M3T1 
+// M3T2
 // Youngblood
 // 3/1/26
 // Ask the user for the width and length of two rectangles
-// Find the area
+// Find the area and find which is larger
 
 #include <iostream>
 using namespace std;
@@ -31,7 +31,20 @@ int main() {
     area2 = len2 * wid2;
     // Print the area
     cout << "The first rectangle has an area of: " << area1 << endl;
-    cout << "The first rectangle has an area of: " << area2 << endl;  
+    cout << "The second rectangle has an area of: " << area2 << endl;  
+
+    // Determine which rectangle has the larger area
+    if (area1 > area2) {
+        cout << "Rectangle one is bigger." << endl;
+    }
+
+    else if (area2 > area1) {
+        cout << "Rectangle two is bigger." << endl;
+    }
+
+    else if (area1 == area2) {
+        cout << "Rectangle one and two are the same size." << endl;
+    }
 
     return 0;
 }
