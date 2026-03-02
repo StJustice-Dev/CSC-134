@@ -1,5 +1,5 @@
 // CSC 134
-// M3 Random Numbers Example
+// M3T2
 // Youngblood
 // 3/1/26
 // Start with dice rolls
