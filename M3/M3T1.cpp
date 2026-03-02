@@ -32,6 +32,7 @@ int main() {
     // Print the area
     cout << "The first rectangle has an area of: " << area1 << endl;
     cout << "The first rectangle has an area of: " << area2 << endl;  
+
     
     return 0;
 }
