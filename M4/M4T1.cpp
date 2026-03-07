@@ -3,6 +3,7 @@ CSC-134
 M4T1
 Youngblood
 3/7/26
+Goal: Instruction.
 */
 
 #include <iostream>
@@ -28,6 +29,7 @@ int main(){
 
     int num = MIN_NUMBER;      // Our Counter Variable
     
+    cout << endl;
     cout << "Number Number Squared\n";
     cout << "---------------------------\n";
     
