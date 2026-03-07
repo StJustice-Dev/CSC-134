@@ -3,7 +3,7 @@ CSC-134
 M3HW
 Youngblood
 3/7/26
-Goal: Multiple
+Goal: Silver
 */
 
 #include <iostream>
@@ -116,7 +116,63 @@ void questionTwo(){
 void questionThree(){
     
     // Get user to specify music taste
-    int userChoice;
-    
-    
+    int userChoiceGenre;
+    int userChoiceTempo; 
+
+    cout << "Welcome to the Music Taste Quiz." << endl;
+    cout << "You will be given some options to choose from, ";
+    cout << "and from there you will be recommended a piece of music." << endl;
+
+    cout << "What music genre are you most interested in? "; 
+    cout << "Classical (1), Jazz (2), Rock (3). Enter the corresponding number: ";
+    cin >> userChoiceGenre; 
+
+    if (userChoiceGenre == 1){
+        cout << "You choose: Classical." << endl;
+        cout << "Do you like your music Uptempo (1) or Slow (2)?" << endl;
+        cin >> userChoiceTempo;
+
+        if (userChoiceTempo == 1){
+            cout << "You choose: Uptempo." << endl;
+            cout << "Your recommended piece of music is: " << endl;
+            cout << "Danzón No. 2 by Arturo Márquez." << endl;
+        } else if (userChoiceTempo == 2) {
+            cout << "You choose: Slow." << endl;
+            cout << "Your recommended piece of music is: " << endl;
+            cout << "Chopin: Ballade No. 1 in G Minor, Op. 23" << endl;
+        }
+
+    } else if (userChoiceGenre == 2){
+        cout << "You choose: Jazz." << endl;
+        cout << "Do you like your music Uptempo (1) or Slow (2)?" << endl;
+        cin >> userChoiceTempo;
+
+        if (userChoiceTempo == 1){
+            cout << "You choose: Uptempo." << endl;
+            cout << "Your recommended piece of music is: " << endl;
+            cout << "Easy To Love by Nippon Soul." << endl;
+        } else if (userChoiceTempo == 2) {
+            cout << "You choose: Slow." << endl;
+            cout << "Your recommended piece of music is: " << endl;
+            cout << "Misty by Ella Fitzgerald." << endl;
+        }
+
+    } else if (userChoiceGenre == 3){
+        cout << "You choose: Rock." << endl;
+        cout << "Do you like your music Uptempo (1) or Slow (2)?" << endl;
+        cin >> userChoiceTempo;
+
+        if (userChoiceTempo == 1){
+            cout << "You choose: Uptempo." << endl;
+            cout << "Your recommended piece of music is: " << endl;
+            cout << "Somewhere I Belong by Linkin Park" << endl;
+        } else if (userChoiceTempo == 2) {
+            cout << "You choose: Slow." << endl;
+            cout << "Your recommended piece of music is: " << endl;
+            cout << "For the Love of God by Steve Vai" << endl;
+        }
+    }
+
+    cout << "Thank you for taking the Music Taste Quiz." << endl;
+    cout << "Have a great day." << endl;   
 }
