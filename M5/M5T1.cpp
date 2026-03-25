@@ -14,7 +14,7 @@ using namespace std;
 
 
 void hello_channel();
-int giveAnswer();
+int getUserNumber();
 int double_a_number(int userNumber);
 
 int main(){
@@ -24,8 +24,8 @@ int main(){
     cout << "Hello from the main channel." << endl;
     hello_channel();
     int userNumber = getUserNumber();
-    cout << "Your number is: " << userNumber;
-
+    cout << "Your number is: " << userNumber << endl;
+    doubleNumber = double_a_number(userNumber);
     
     cout << "You're number doubled is: " << doubleNumber << endl;
 
@@ -33,9 +33,8 @@ int main(){
 
 
 void hello_channel(){
-    // Greeting message, give user a number.
+    // Greeting message.
     cout << "Hello from the hello channel." << endl;
-    cout << "Here is your number: 47" << endl;
     return;
 }
 
