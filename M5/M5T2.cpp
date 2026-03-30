@@ -1,9 +1,9 @@
 /*
 CSC-134
-M5T1
+M5T2
 Youngblood
 3/29/26
-Goal: Basic functions, create on void function, and one value returning function.
+Goal: Create a 1-10 Squared Table. 
 */
 
 #include <iostream>
