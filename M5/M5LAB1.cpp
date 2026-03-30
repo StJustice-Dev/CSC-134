@@ -1,6 +1,6 @@
 /*
 CSC 134
-M5LAB1 - Hello, World
+M5LAB1
 St. Justice
 3/29/26
 Goal: Make a Choose Your Own Adventure game. 
