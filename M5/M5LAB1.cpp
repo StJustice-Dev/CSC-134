@@ -94,5 +94,3 @@ void choice_go_home() {
     cout << "You decide to go home." << endl;
     cout << "Adventure can always wait another day." << endl;
 }
-
-// any new choices go here
