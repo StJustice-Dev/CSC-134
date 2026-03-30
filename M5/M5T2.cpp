@@ -9,26 +9,6 @@ Goal: Basic functions, create on void function, and one value returning function
 #include <iostream>
 using namespace std;
 
-int square(int number);
-int printResult();
-
-int main(){
-
-    // Declare variables
-    int count = 0;
-    int result;
-
-    cout << "Welcome to the 1-10 Times Table, enter a number and it will be squared.\n\n";
-
-    while (count <= 10){
-        result - square(count);
-        printResult(count, result);
-        count++;
-    }
-
-    }
-}
-
 void printResult(int number, int result){
     cout << number << " Squared is: " << result << endl;
 }
@@ -39,3 +19,21 @@ int square(int number) {
     result = number * number;
     return result;
 }
+int main(){
+
+    // Declare variables
+    // Count numbers, find result for all. 
+    int count = 1;
+    int result;
+
+    cout << "Welcome to the 1-10 Squared Table.\n\n";
+
+    while (count <= 10){
+        result = square(count);
+        printResult(count, result);
+        count++;
+    }
+    return 0;
+}
+
+
