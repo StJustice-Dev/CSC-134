@@ -51,6 +51,7 @@ int main()
 
 double getLength(double length){
 
+    // Get length
     cout << "Enter rectangle's length: ";
     cin >> length;
 
@@ -59,7 +60,8 @@ double getLength(double length){
 
 double getWidth(double width){
 
-    cout << "Enter rectangle's length: ";
+    // Get width
+    cout << "Enter rectangle's width: ";
     cin >> width;
 
     return width;
@@ -67,6 +69,7 @@ double getWidth(double width){
 
 double getArea(double length, double width){
 
+    // Calculate Area
     double area = length * width; 
     
     return area;
@@ -75,9 +78,12 @@ double getArea(double length, double width){
 
 double displayData(double length, double width, double area){
 
+    // Display and format finale output. 
+    cout << endl;
     cout << "The length of the rectangle is: " << length << "." << endl;
     cout << "The width of the rectangle is: " << width << "." << endl;
     cout << "The area of the rectangle is: " << area << "." << endl;
+    cout << endl;
 
-    return;
+    return area;
 }
