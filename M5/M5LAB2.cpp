@@ -14,10 +14,10 @@ using namespace std;
 // getWidth, getArea, and displayData
 // functions here.
 
-double getLength();
-double getWidth();
-double getArea();
-double displayData();
+double getLength(double length);
+double getWidth(double width);
+double getArea(double length, double width);
+double displayData(double length, double width, double area);
 
 
 int main()
