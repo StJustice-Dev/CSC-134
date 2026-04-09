@@ -207,3 +207,39 @@ void geometryCalculator(){
     }
 
 }
+
+void distanceTraveled(){
+
+    // Declare Variables
+    int time;
+    int distance;
+    int speed;
+    int counter;
+
+    cout << "Value can not be a negative number, re-enter: ";
+    cin >> speed;
+
+    // Validate input
+    while (speed < 1){
+        cout << "Value must be above 1: ";
+        cin >> speed; 
+    }
+
+    cout << "How many hours has it traveled? ";
+    cin >> time;
+
+    while (time < 1){
+        cout << "Value must be above 1: ";
+        cin >> time; 
+    }
+
+    distance = speed * time;
+    
+    cout << "Hour  Distance Traveled" << endl;
+    cout << "-----------------------------------" << endl;
+    
+    while (counter < time){
+        cout << time << "     " << distance << 
+    }
+
+}
