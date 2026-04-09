@@ -13,9 +13,11 @@ using namespace std;
 
 void averageRainfall();
 void blockVolume();
+void numberalSwitch();
 
 int main(){
 
+    numberalSwitch();
     averageRainfall();
     blockVolume();
 
@@ -94,6 +96,46 @@ void blockVolume(){
     // Calculate the volume
     volume = length * width * height;
 
-    cout << "The volume of your block is: " << volume << "." << endl;
+    cout << "The volume of your block is: " << volume << "." << endl;    
+}
+
+void numeralSwitch(){
+
+    int userNumber;
+    string romanNumeral;
+
+    // Prompt user for number
+    cout << "Enter a number (1 - 10): ";
+    cin >> userNumber; 
+    
+    while (userNumber <= 0){
+        cout << "Value entered can not be greater than 10 or less than 1. Re-enter: ";
+        cin >> userNumber;
+    }
+
+    if (userNumber == 1){
+        romanNumeral = "I";
+    } else if (userNumber == 2){
+        romanNumeral = "II";
+    } else if (userNumber == 3){
+        romanNumeral = "III";
+    } else if (userNumber == 4){
+        romanNumeral = "IV";
+    } else if (userNumber == 5){
+        romanNumeral = "V";
+    } else if (userNumber == 6){
+        romanNumeral = "VI";
+    } else if (userNumber == 7){
+        romanNumeral = "VII";
+    } else if (userNumber == 8){
+        romanNumeral = "VIII";
+    } else if (userNumber == 9){
+        romanNumeral = "IX";
+    } else if (userNumber == 10){
+        romanNumeral = "X";
+    }
+
+    cout << "The Roman numberal version of " << userNumber << "is " << romanNumeral;
     
 }
+
