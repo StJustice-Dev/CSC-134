@@ -99,43 +99,31 @@ void blockVolume(){
     cout << "The volume of your block is: " << volume << "." << endl;    
 }
 
-void numeralSwitch(){
-
+void numeralSwitch() {
     int userNumber;
     string romanNumeral;
 
-    // Prompt user for number
     cout << "Enter a number (1 - 10): ";
-    cin >> userNumber; 
-    
-    while (userNumber <= 0){
-        cout << "Value entered can not be greater than 10 or less than 1. Re-enter: ";
+    cin >> userNumber;
+
+    while (userNumber < 1 || userNumber > 10) {
+        cout << "Value must be between 1 and 10. Re-enter: ";
         cin >> userNumber;
     }
 
-    if (userNumber == 1){
-        romanNumeral = "I";
-    } else if (userNumber == 2){
-        romanNumeral = "II";
-    } else if (userNumber == 3){
-        romanNumeral = "III";
-    } else if (userNumber == 4){
-        romanNumeral = "IV";
-    } else if (userNumber == 5){
-        romanNumeral = "V";
-    } else if (userNumber == 6){
-        romanNumeral = "VI";
-    } else if (userNumber == 7){
-        romanNumeral = "VII";
-    } else if (userNumber == 8){
-        romanNumeral = "VIII";
-    } else if (userNumber == 9){
-        romanNumeral = "IX";
-    } else if (userNumber == 10){
-        romanNumeral = "X";
+    switch (userNumber) {
+        case 1: romanNumeral = "I"; break;
+        case 2: romanNumeral = "II"; break;
+        case 3: romanNumeral = "III"; break;
+        case 4: romanNumeral = "IV"; break;
+        case 5: romanNumeral = "V"; break;
+        case 6: romanNumeral = "VI"; break;
+        case 7: romanNumeral = "VII"; break;
+        case 8: romanNumeral = "VIII"; break;
+        case 9: romanNumeral = "IX"; break;
+        case 10: romanNumeral = "X"; break;
+        default: romanNumeral = "Invalid";
     }
 
-    cout << "The Roman numberal version of " << userNumber << "is " << romanNumeral;
-    
+    cout << "The Roman numeral version of " << userNumber << " is " << romanNumeral;
 }
-
