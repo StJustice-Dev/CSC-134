@@ -11,13 +11,15 @@ Goal: Solve a multiple of questions.
 #include <string>
 using namespace std;
 
+
 void averageRainfall();
 void blockVolume();
-void numberalSwitch();
+void numeralSwitch();
+void geometryCalculator();
 
 int main(){
 
-    numberalSwitch();
+    numeralSwitch();
     averageRainfall();
     blockVolume();
 
@@ -100,17 +102,22 @@ void blockVolume(){
 }
 
 void numeralSwitch() {
+
+    // Declare Variables
     int userNumber;
     string romanNumeral;
 
+    // Get user number
     cout << "Enter a number (1 - 10): ";
     cin >> userNumber;
 
+    // Check if valid number
     while (userNumber < 1 || userNumber > 10) {
         cout << "Value must be between 1 and 10. Re-enter: ";
         cin >> userNumber;
     }
 
+    // Convert and display 
     switch (userNumber) {
         case 1: romanNumeral = "I"; break;
         case 2: romanNumeral = "II"; break;
@@ -125,5 +132,78 @@ void numeralSwitch() {
         default: romanNumeral = "Invalid";
     }
 
-    cout << "The Roman numeral version of " << userNumber << " is " << romanNumeral;
+    cout << "The Roman numeral version of " << userNumber << " is " << romanNumeral << endl; 
+}
+
+void geometryCalculator(){
+
+    // Declare Variables
+    int userChoice;
+
+    // Get user choice
+    cout << "Geometry Calculator" << endl;
+    cout << "1. Calculate the Area of a Circle" << endl;
+    cout << "2. Calculate the Area of a Rectangle" << endl;
+    cout << "3. Calculate the Area of a Triangle" << endl;
+    cout << "4. Quit" << endl;
+    cout << "Enter your choice (1-4): "; 
+
+    cin >> userChoice;
+
+    // Validate input
+    while (userChoice < 1 || userChoice > 10){
+        cout << "Value must be between 1 and 10. Re-enter: ";
+        cin >> userChoice; 
+    }
+
+    if (userChoice == 1){
+        
+        // Declare Var
+        double radius;
+        double area;
+
+        // Get User Info
+        cout << "Enter the radius of the circle." << endl;
+        cin >> radius;
+
+        // Calculate and Display
+        area = 3.14159 * radius;
+        cout << "The area of the circle is: " << endl; 
+
+    } else if (userChoice == 2){
+        
+        // Declare Var
+        double length, width;
+        double area;
+
+        // Get User Info
+        cout << "Enter the length of the rectangle." << endl;
+        cin >> length;
+        cout << "Enter the width of the rectangle." << endl;
+        cin >> width;
+
+        // Calculate and Display
+        area = length * width;
+        cout << "The area of the rectangle is: " << endl; 
+
+    } else if (userChoice == 3){
+
+        // Declare Var
+        double base, height;
+        double area;
+
+        // Get User Info
+        cout << "Enter the base of the triangle." << endl;
+        cin >> base;
+        cout << "Enter the height of the triangle." << endl;
+        cin >> height;
+
+        // Calculate and Display
+        area = base * height * .5;
+        cout << "The area of the triangle is: " << endl; 
+
+    } else if (userChoice == 4){
+        cout << "Returning to Main Menu." << endl;         
+    }
+
 }
