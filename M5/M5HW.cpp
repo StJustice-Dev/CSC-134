@@ -20,16 +20,48 @@ void distanceTraveled();
 
 int main(){
 
-    distanceTraveled();
-    geometryCalculator();
-    numeralSwitch();
-    averageRainfall();
-    blockVolume();
+    string loophold = "On";
 
+    while (loophold == "On"){
 
+        cout << endl;
+        cout << "Main Menu" << endl;
+        cout << "Choose one of the following programs:" << endl;
+        cout << "1. Rainfall Average " << endl;
+        cout << "2. Calculate Volume of a Block " << endl;
+        cout << "3. Number to Roman Numeral " << endl;
+        cout << "4. Geometry Calculator " << endl;
+        cout << "5. Distance Traveled Calculator " << endl;
+        cout << "6. [Quit]" << endl;
+        cout << "Choose: ";
+        
+        int choice;
+        cin >> choice;
+        
+        if (1 == choice) { 
+            averageRainfall();
+        } else if (2 == choice) {
+            blockVolume();
+        } else if (3 == choice) {
+            numeralSwitch();
+        } else if (4 == choice) {
+            geometryCalculator();
+        } else if (5 == choice) {
+            distanceTraveled();
+        } else if (6 == choice) {
+            cout << "Ok, quitting program." << endl;
+            loophold = "Off"; // Ends Loop 
+        } else {
+            cout << "That's not a valid choice, please try again." << endl;
+            cin.ignore(); // clear the user input
+            main();  // try again
+        }
 
+    }
     return 0;
 }
+
+
 
 void averageRainfall(){ 
     
@@ -220,7 +252,7 @@ void distanceTraveled(){
     int time;
     int distance;
     int speed;
-    int counter = 0;
+    int counter = 1;
 
     cout << "What is the speed of the vehicle in mph? ";
     cin >> speed;
@@ -244,13 +276,18 @@ void distanceTraveled(){
     cout << "Hour  Distance Traveled" << endl;
     cout << "-----------------------------------" << endl;
     
+    while (time < 1){
+        cout << "Value must be above 0: ";
+        cin >> time; 
+    }
+
+    cout << "Hour  Distance Traveled" << endl;
+    cout << "-----------------------------------" << endl;
+
     while (counter <= time){
-        distance = speed * time;
-        cout << time << "    " << speed << endl;
-        
-
+        distance = speed * counter;
+        cout << counter << "     " << distance << endl;
         counter++;
-
     }
 
 }
