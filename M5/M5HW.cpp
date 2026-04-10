@@ -16,9 +16,12 @@ void averageRainfall();
 void blockVolume();
 void numeralSwitch();
 void geometryCalculator();
+void distanceTraveled();
 
 int main(){
 
+    distanceTraveled();
+    geometryCalculator();
     numeralSwitch();
     averageRainfall();
     blockVolume();
@@ -168,7 +171,8 @@ void geometryCalculator(){
 
         // Calculate and Display
         area = 3.14159 * radius;
-        cout << "The area of the circle is: " << endl; 
+        cout << "The area of the circle is: " << area << endl; 
+        cout << endl;
 
     } else if (userChoice == 2){
         
@@ -184,7 +188,8 @@ void geometryCalculator(){
 
         // Calculate and Display
         area = length * width;
-        cout << "The area of the rectangle is: " << endl; 
+        cout << "The area of the rectangle is: " << area << endl; 
+        cout << endl;
 
     } else if (userChoice == 3){
 
@@ -200,7 +205,8 @@ void geometryCalculator(){
 
         // Calculate and Display
         area = base * height * .5;
-        cout << "The area of the triangle is: " << endl; 
+        cout << "The area of the triangle is: " << area << endl;
+        cout << endl; 
 
     } else if (userChoice == 4){
         cout << "Returning to Main Menu." << endl;         
@@ -214,9 +220,9 @@ void distanceTraveled(){
     int time;
     int distance;
     int speed;
-    int counter;
+    int counter = 0;
 
-    cout << "Value can not be a negative number, re-enter: ";
+    cout << "What is the speed of the vehicle in mph? ";
     cin >> speed;
 
     // Validate input
@@ -238,8 +244,13 @@ void distanceTraveled(){
     cout << "Hour  Distance Traveled" << endl;
     cout << "-----------------------------------" << endl;
     
-    while (counter < time){
-        cout << time << "     " << distance << 
+    while (counter <= time){
+        distance = speed * time;
+        cout << time << "    " << speed << endl;
+        
+
+        counter++;
+
     }
 
 }
