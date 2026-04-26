@@ -12,6 +12,8 @@ using namespace std;
 // Function Declarations
 void method1();
 void method2();
+void method3();
+void method4();
 
 // main
 int main() {
@@ -72,4 +74,64 @@ void method2() {
     cout << "Total = " << poke_total << endl;
     cout << "Average = " << poke_avg << endl;
 
+}
+
+void method3() {
+    cout << "Enter cars counted per day." << endl;
+    cout << "Day 0 = Monday, Day 4 = Friday" << endl;
+
+    const int SIZE = 5;
+    int count = 0;
+    int cars_today;
+    int total = 0;
+    double average = 0;
+
+    while (count < SIZE) {
+        cout << "Day " << count << ": ";
+        cin >> cars_today;
+
+        total += cars_today;
+        count++;
+    }
+
+    cout << "Total = " << total << endl;
+    average = (double) total / SIZE;
+    cout << "Average = " << average << endl;
+}
+
+void method4() {
+    const int SIZE = 5;
+    string days[SIZE] = {"M", "T", "W", "Th", "F"};
+    int cars[SIZE];
+
+    int total = 0;
+    double average = 0.0;
+
+    // input
+    for (int i = 0; i < SIZE; i++) {
+        cout << "# cars on " << days[i] << ": ";
+        cin >> cars[i];
+    }
+
+    // table output + total
+    cout << "Day\tCars" << endl;
+    for (int i = 0; i < SIZE; i++) {
+        cout << days[i] << "\t" << cars[i] << endl;
+        total += cars[i];
+    }
+
+    // results
+    average = (double) total / SIZE;
+    cout << "Total = " << total << endl;
+    cout << "Average = " << average << endl;
+
+    // ASCII graph
+    cout << "\nGraph:" << endl;
+    for (int i = 0; i < SIZE; i++) {
+        cout << days[i] << ": ";
+        for (int j = 0; j < cars[i]; j++) {
+            cout << "*";
+        }
+        cout << endl;
+    }
 }
